@@ -1,0 +1,19 @@
+databinding使用
+
+1. 准备一个xml布局
+    alt+enter -> 选择把布局转换成data binding的布局，同时生成对应的activity或者fragment的DataBinding的类
+
+2. 在对应的activity或fragment的类中，初始化界面的绑定
+    var binding = DataBindingUtils.setContentView
+
+3. 在转变以后的databinding对应的xml布局中添加数据节点
+    <data>
+    <import type="xxxxxx数据对应的类">
+    <!--var data:UserInfo-->
+    <variable name="数据对象的实例名" type="数据对象的类型">
+    </variable></data>
+
+4.  通过binding的实例设置xml布局上的数据对象实例赋值
+    <!--data = UserInfo()-->
+    binding.setVariable(BR.xxx数据对象实例的名字,数据对象)
+    binding.xml中data的数据变量名
