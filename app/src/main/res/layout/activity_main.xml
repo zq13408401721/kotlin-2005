@@ -8,6 +8,8 @@
         <variable
             name="imgData"
             type="com.kotlin.mydemo.data.ImgData" />
+
+
         <variable
             name="clickEvt"
             type="com.kotlin.mydemo.MainActivity" />
@@ -58,5 +60,12 @@
             app:layout_constraintTop_toTopOf="parent"
             android:onClick="@{(view)->clickEvt.click(view)}"
             android:layout_marginTop="200dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@={clickEvt.username}"
+            android:layout_marginTop="250dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
